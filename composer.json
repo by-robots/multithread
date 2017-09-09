@@ -1,0 +1,14 @@
+{
+    "name": "byrobots/many-pies",
+    "description": "Makes working with PHP threads a breeze.",
+    "authors": [{
+        "name": "By Robots"
+    }],
+    "require": {},
+    "autoload": {
+        "psr-0": {
+            "ByRobots\\ManyPies\\": "src/"
+        }
+    },
+    "require-dev": {}
+}
