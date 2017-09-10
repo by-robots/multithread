@@ -1,8 +1,8 @@
 <?php
 
-namespace ByRobots\ManyPies;
+namespace ByRobots\Multithread;
 
-class ManyPies
+class Multithread
 {
     //
 }

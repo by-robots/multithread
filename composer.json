@@ -1,6 +1,6 @@
 {
-    "name": "byrobots/many-pies",
-    "description": "Makes working with PHP threads a breeze.",
+    "name": "byrobots/multithread",
+    "description": "A package for working with PHP's PCNTL extension in a readable object-orientated fashion.",
     "authors": [{
         "name": "By Robots"
     }],
@@ -11,12 +11,12 @@
     },
     "autoload": {
         "psr-4": {
-            "ByRobots\\ManyPies\\": "src"
+            "ByRobots\\Multithread\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ByRobots\\ManyPies\\Tests\\": "tests"
+            "ByRobots\\Multithread\\Tests\\": "tests"
         }
     }
 }

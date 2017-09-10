@@ -1,8 +1,8 @@
 <?php
 
-namespace ByRobots\ManyPies\Tests;
+namespace ByRobots\Multithread\Tests;
 
-use ByRobots\ManyPies\ManyPies;
+use ByRobots\Multithread\Multithread;
 use Mockery;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 

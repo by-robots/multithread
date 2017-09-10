@@ -1,8 +1,8 @@
 <?php
 
-namespace ByRobots\ManyPies\Queues;
+namespace ByRobots\Multithread\Queues;
 
-use ByRobots\ManyPies\Tasks\TaskInterface as Task;
+use ByRobots\Multithread\Tasks\TaskInterface as Task;
 
 abstract class AbstractQueue
 {
@@ -16,7 +16,7 @@ abstract class AbstractQueue
     /**
      * Add a task to the queue.
      *
-     * @param ByRobots\ManyPies\Tasks\TaskInterface $task
+     * @param ByRobots\Multithread\Tasks\TaskInterface $task
      * @param int $times Number of times to add the task. Defaults to 1.
      *
      * @return void

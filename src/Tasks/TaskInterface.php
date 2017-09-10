@@ -1,6 +1,6 @@
 <?php
 
-namespace ByRobots\ManyPies\Tasks;
+namespace ByRobots\Multithread\Tasks;
 
 interface TaskInterface
 {
