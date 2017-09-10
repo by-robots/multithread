@@ -32,4 +32,14 @@ abstract class AbstractQueue
     {
         return $this->queue;
     }
+
+    /**
+     * Clear the queue.
+     *
+     * @return avoid
+     */
+    public function clear()
+    {
+        $this->queue = [];
+    }
 }
