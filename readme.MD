@@ -5,4 +5,5 @@ fashion.
 [![Build Status](https://travis-ci.org/byrobots/multithread.svg?branch=master)](https://travis-ci.org/byrobots/multithread)
 
 ## Requirements
+- PHP 7.0+
 - PCNTL (Not available on Windows)
