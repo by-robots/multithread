@@ -1,10 +1,10 @@
 <?php
 
-namespace ByRobots\ManyPies\Tests\Queues;
+namespace ByRobots\Multithread\Tests\Queues;
 
-use ByRobots\ManyPies\Queues\Queue;
-use ByRobots\ManyPies\Tasks\TaskInterface;
-use ByRobots\ManyPies\Tests\TestCase;
+use ByRobots\Multithread\Queues\Queue;
+use ByRobots\Multithread\Tasks\TaskInterface;
+use ByRobots\Multithread\Tests\TestCase;
 use Mockery;
 
 class AddTask extends TestCase
