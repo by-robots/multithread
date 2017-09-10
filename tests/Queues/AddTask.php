@@ -19,4 +19,17 @@ class AddTask extends TestCase
 
         $this->assertEquals(1, count($queue));
     }
+
+    public function testAddingAnotherTask()
+    {
+        $queue   = new Queue;
+        $taskOne = Mockery::mock(TaskInterface::class);
+        $taskTwo = Mockery::mock(TaskInterface::class);
+
+        $queue->addTask($taskOne);
+        $queue->addTask($taskTwo);
+        $queue = $queue->retrieve();
+
+        $this->assertEquals(2, count($queue));
+    }
 }
