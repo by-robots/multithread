@@ -12,5 +12,10 @@
         "psr-4": {
             "ByRobots\\ManyPies\\": "src"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ByRobots\\ManyPies\\Tests\\": "tests"
+        }
     }
 }
