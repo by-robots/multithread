@@ -30,15 +30,26 @@ class Runner implements RunnerInterface
      */
     public function run()
     {
-        foreach ($this->tasks as $task) {
-            $pid = pcntl_fork();
+        $pids = [];
+        foreach ($this->tasks as $key => $task) {
+            $pids[$key] = pcntl_fork();
 
-            if ($pid == 0) {
+            if (!$pids[$key]) {
                 $task->process();
+
+                if (!defined('IN_PHPUNIT') or !IN_PHPUNIT) {
+                    // It's ugly but if we exit in PHPUnit then the tests stop.
+                    // Need to do it in the wild, though, hence setting a
+                    // constant to be checked when testing.
+                    exit;
+                }
             }
         }
 
-        // Hold the parent process until all the children are completed.
-        while (pcntl_waitpid(0, $status) != -1);
+        for ($i = 0; $i < count($pids); $i++) {
+            pcntl_waitpid($pids[$i], $status, WUNTRACED);
+        }
+
+        return;
     }
 }
