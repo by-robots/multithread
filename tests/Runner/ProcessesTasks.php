@@ -2,10 +2,10 @@
 
 namespace ByRobots\Multithread\Tests\Runner;
 
-use Mockery;
 use ByRobots\Multithread\Runner\Runner;
-use ByRobots\Multithread\Tests\TestCase;
 use ByRobots\Multithread\Tasks\TaskInterface;
+use ByRobots\Multithread\Tests\TestCase;
+use Mockery;
 
 class ProcessesTasks extends TestCase
 {
