@@ -4,9 +4,9 @@ namespace ByRobots\Multithread\Tests;
 
 use ByRobots\Multithread\Multithread;
 use Mockery;
-use PHPUnit\Framework\TestCase as PHPUnitTestCase;
+use \Mockery\Adapter\Phpunit\MockeryTestCase;
 
-abstract class TestCase extends PHPUnitTestCase
+abstract class TestCase extends MockeryTestCase
 {
     public function tearDown()
     {

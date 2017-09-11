@@ -4,15 +4,8 @@ namespace ByRobots\Multithread\Queue;
 
 use ByRobots\Multithread\Tasks\TaskInterface as Task;
 
-class Queue implements QueueInterface
+interface QueueInterface
 {
-    /**
-     * Contains the tasks to run.
-     *
-     * @var array
-     */
-    private $queue;
-
     /**
      * Add a task to the queue.
      *
@@ -21,30 +14,19 @@ class Queue implements QueueInterface
      *
      * @return void
      */
-    public function addTask(Task $task, $times)
-    {
-        for ($index = 0; $index < $times; $index ++) {
-            $this->queue[] = $task;
-        }
-    }
+    public function addTask(Task $task, $times);
 
     /**
      * Retrieve the queue.
      *
      * @return array
      */
-    public function retrieve()
-    {
-        return $this->queue;
-    }
+    public function retrieve();
 
     /**
      * Clear the queue.
      *
      * @return avoid
      */
-    public function clear()
-    {
-        $this->queue = [];
-    }
+    public function clear();
 }

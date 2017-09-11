@@ -14,7 +14,7 @@ class AddTask extends TestCase
         $queue = new Queue;
         $task  = Mockery::mock(TaskInterface::class);
 
-        $queue->addTask($task);
+        $queue->addTask($task, 1);
         $queue = $queue->retrieve();
 
         $this->assertEquals(1, count($queue));
@@ -26,8 +26,8 @@ class AddTask extends TestCase
         $taskOne = Mockery::mock(TaskInterface::class);
         $taskTwo = Mockery::mock(TaskInterface::class);
 
-        $queue->addTask($taskOne);
-        $queue->addTask($taskTwo);
+        $queue->addTask($taskOne, 1);
+        $queue->addTask($taskTwo, 1);
         $queue = $queue->retrieve();
 
         $this->assertEquals(2, count($queue));
