@@ -39,6 +39,6 @@ class Runner implements RunnerInterface
         }
 
         // Hold the parent process until all the children are completed.
-        while(pcntl_waitpid(0, $status) != -1);
+        while (pcntl_waitpid(0, $status) != -1);
     }
 }
