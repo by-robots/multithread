@@ -30,6 +30,15 @@ class Runner implements RunnerInterface
      */
     public function run()
     {
-        //
+        foreach ($this->tasks as $task) {
+            $pid = pcntl_fork();
+
+            if ($pid == 0) {
+                $task->process();
+            }
+        }
+
+        // Hold the parent process until all the children are completed.
+        while(pcntl_waitpid(0, $status) != -1);
     }
 }
