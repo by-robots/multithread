@@ -23,7 +23,7 @@ class Queue implements QueueInterface
      */
     public function addTask(Task $task, $times)
     {
-        for ($index = 0; $index < $times; $index ++) {
+        for ($index = 0; $index < $times; $index++) {
             $this->queue[] = $task;
         }
     }
