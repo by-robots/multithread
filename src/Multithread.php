@@ -3,10 +3,10 @@
 namespace ByRobots\Multithread;
 
 use ByRobots\Multithread\Queue\Queue;
-use ByRobots\Multithread\Runner\Runner;
-use ByRobots\Multithread\Tasks\TaskInterface;
 use ByRobots\Multithread\Queue\QueueInterface;
+use ByRobots\Multithread\Runner\Runner;
 use ByRobots\Multithread\Runner\RunnerInterface;
+use ByRobots\Multithread\Tasks\TaskInterface;
 
 class Multithread
 {
@@ -31,8 +31,8 @@ class Multithread
      */
     public function __construct(QueueInterface $queue = null, RunnerInterface $runner = null)
     {
-        $this->queue = ! $queue ? new Queue : $queue;
-        $this->runner = ! $runner ? new Runner : $runner;
+        $this->queue  = !$queue  ? new Queue  : $queue;
+        $this->runner = !$runner ? new Runner : $runner;
     }
 
     /**
