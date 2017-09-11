@@ -1,8 +1,8 @@
 <?php
 
-namespace ByRobots\Multithread\Tests\Queues;
+namespace ByRobots\Multithread\Tests\Queue;
 
-use ByRobots\Multithread\Queues\Queue;
+use ByRobots\Multithread\Queue\Queue;
 use ByRobots\Multithread\Tasks\TaskInterface;
 use ByRobots\Multithread\Tests\TestCase;
 use Mockery;
