@@ -12,7 +12,7 @@ function pcntl_fork()
     return false;
 }
 
-function pcntl_waitpid($pid , &$status)
+function pcntl_waitpid($pid, &$status)
 {
     return true;
 }
