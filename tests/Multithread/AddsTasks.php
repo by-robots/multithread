@@ -13,9 +13,9 @@ class AddsTasks extends TestCase
 {
     public function testAddsTask()
     {
-        $task = Mockery::mock(TaskInterface::class);
+        $task   = Mockery::mock(TaskInterface::class);
         $runner = Mockery::mock(RunnerInterface::class);
-        $queue = Mockery::mock(QueueInterface::class);
+        $queue  = Mockery::mock(QueueInterface::class);
 
         $queue->shouldReceive('addTask')->with($task, 1)->once();
 
@@ -25,9 +25,9 @@ class AddsTasks extends TestCase
 
     public function testAddsTasks()
     {
-        $task = Mockery::mock(TaskInterface::class);
+        $task   = Mockery::mock(TaskInterface::class);
         $runner = Mockery::mock(RunnerInterface::class);
-        $queue = Mockery::mock(QueueInterface::class);
+        $queue  = Mockery::mock(QueueInterface::class);
 
         $queue->shouldReceive('addTask')->with($task, 5)->once();
 

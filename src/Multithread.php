@@ -45,4 +45,15 @@ class Multithread
     {
         $this->queue->addTask($task, $times);
     }
+
+    /**
+     * Runs the task list.
+     *
+     * @return void
+     */
+    public function fork()
+    {
+        $this->runner->setTaskList($this->queue->retrieve());
+        $this->runner->run();
+    }
 }
