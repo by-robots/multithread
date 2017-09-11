@@ -2,17 +2,18 @@
 
 namespace ByRobots\Multithread;
 
-use ByRobots\Multithread\Queues\AbstractQueue;
-use ByRobots\Multithread\Queues\Queue;
+use ByRobots\Multithread\Queue\Queue;
+use ByRobots\Multithread\Queue\QueueInterface;
 use ByRobots\Multithread\Runner\Runner;
 use ByRobots\Multithread\Runner\RunnerInterface;
+use ByRobots\Multithread\Tasks\TaskInterface;
 
 class Multithread
 {
     /**
      * The queue.
      *
-     * @var ByRobots\Multithread\Queue\AbstractQueue
+     * @var ByRobots\Multithread\Queue\QueueInterface
      */
     private $queue;
 
@@ -28,9 +29,20 @@ class Multithread
      *
      * @return void
      */
-    public function __construct(AbstractQueue $queue = null, RunnerInterface $runner = null)
+    public function __construct(QueueInterface $queue = null, RunnerInterface $runner = null)
     {
         $this->queue  = !$queue  ? new Queue  : $queue;
         $this->runner = !$runner ? new Runner : $runner;
+    }
+
+    /**
+     * Add a task to the queue.
+     *
+     * @param ByRobots\Multithread\Tasks\TaskInterface $task
+     * @param int $times Number of times to add the task. Defaults to 1.
+     */
+    public function addTask(TaskInterface $task, $times = 1)
+    {
+        $this->queue->addTask($task, $times);
     }
 }
