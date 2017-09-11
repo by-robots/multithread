@@ -3,6 +3,7 @@ A package for working with PHP's PCNTL extension in a readable object-orientated
 fashion.
 
 [![Build Status](https://travis-ci.org/byrobots/multithread.svg?branch=master)](https://travis-ci.org/byrobots/multithread)
+[![Coverage Status](https://coveralls.io/repos/github/byrobots/multithread/badge.svg?branch=master)](https://coveralls.io/github/byrobots/multithread?branch=master)
 [![StyleCI](https://styleci.io/repos/102980804/shield?branch=master)](https://styleci.io/repos/102980804)
 
 ## Requirements
