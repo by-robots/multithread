@@ -20,8 +20,17 @@ first sequentially call each class and then add each task to Multithread and
 have Multithread run. The running times of both methods will then be displayed.
 Obviously this is *very* approximate.
 
-To run the benchmark tests simply run `php benchmarks/run.php`.
+Example:
+```
+$ php benchmarks/run.php
+Sequential time finished in 27.118049144745 seconds.
+Forked processes finished in 16.08149600029 seconds.
+All done.
+```
 
-## TO-DO
-- [ ] More benchmark tests
+## TO-DOs
+In order of importance.
+
+- [ ] Limit maximum number of processes
 - [ ] Retrieve process results (sockets?)
+- [ ] More benchmark tests
