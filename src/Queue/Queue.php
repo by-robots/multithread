@@ -1,6 +1,6 @@
 <?php
 
-namespace ByRobots\Multithread\Queues;
+namespace ByRobots\Multithread\Queue;
 
 use ByRobots\Multithread\Tasks\TaskInterface as Task;
 
