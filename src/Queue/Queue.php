@@ -16,10 +16,8 @@ class Queue extends AbstractQueue
      */
     public function addTask(Task $task, $times = 1)
     {
-        $index = 0;
-        while ($index < $times) {
+        for ($index = 0; $index < $times; $index ++) {
             $this->queue[] = $task;
-            $index ++;
         }
     }
 }
