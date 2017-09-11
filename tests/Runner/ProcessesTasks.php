@@ -7,7 +7,7 @@ use ByRobots\Multithread\Runner\Runner;
 use ByRobots\Multithread\Tests\TestCase;
 use ByRobots\Multithread\Tasks\TaskInterface;
 
-class ProcessesTask extends TestCase
+class ProcessesTasks extends TestCase
 {
     public function testProcessesOneTask()
     {
