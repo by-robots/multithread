@@ -7,9 +7,6 @@ use ByRobots\Multithread\Tasks\TaskInterface;
  */
 class Primes implements TaskInterface
 {
-    /**
-     * O(n^2) in case you're interested.
-     */
     public function process()
     {
         $primeNumbers = [];
