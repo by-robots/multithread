@@ -7,9 +7,6 @@ use ByRobots\Multithread\Tasks\TaskInterface;
  */
 class Hash implements TaskInterface
 {
-    /**
-     * O(n)
-     */
     public function process()
     {
         for ($i = 0; $i < 250; $i++) {
