@@ -7,9 +7,6 @@ use ByRobots\Multithread\Tasks\TaskInterface;
  */
 class Fibonacci implements TaskInterface
 {
-    /**
-     * O(n)
-     */
     public function process()
     {
         $fibonacci = [0 , 1]; // Get the ball rolling
